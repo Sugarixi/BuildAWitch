@@ -1,0 +1,36 @@
+@media screen and (max-width: 1039px) {
+  .witchIndex {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .characterTextBubble,
+  .bubblePoint,
+  .convoText {
+    display: none !important;
+  }
+  .titleLetter {
+    display: unset !important;
+    justify-content: unset !important;
+    align-items: unset !important;
+    text-align: end !important;
+  }
+
+  .character {
+    height: 50%;
+  }
+  .logout {
+    display: none;
+  }
+  .logoutLogo {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .potionScreen,
+  .bubbleScreen {
+    width: 80% !important;
+  }
+}

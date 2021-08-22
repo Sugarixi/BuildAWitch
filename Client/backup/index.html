@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../Assets/css/index.css">
+    <link rel="stylesheet" href="../Assets/css/background.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="starsBackground">
+    </div>
+    <div class="content">
+        <div class="loginContainer">
+            <div class="formBox">
+                <div class="title">✨Build A Witch✨</div>
+                <div class="buttonBox">
+                    <div id="btn" style="left: 0px;"></div>
+                    <button type="button" class="toggleBtn" onclick="login()">Log in</button>
+                    <button type="button" class="toggleBtn" onclick="register()">Register</button>
+                    <button type="button" class="toggleBtn" onclick="change()">Change Password</button>
+                </div>
+                <form id="login" class="inputGroup" onsubmit="tryLogin(); return false;">
+                    <input id="loginName" type="text" class="inputField" placeholder="User ID" required>
+                    <input id="loginPassword" type="password" class="inputField" placeholder="Password" required>
+                    <button class="submitBtn" type="submit">Log in</button>
+                    <div class="socials">
+                        <i class="fab fa-linkedin"></i>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </form>
+                <form id="register" class="inputGroup" onsubmit="tryRegister(); return false;">
+                    <input id="registerName" type="text" class="inputField" placeholder="User ID" required>
+                    <input id="registerEmail" type="email" class="inputField" placeholder="Email" required>
+                    <input id="registerPassword" type="password" class="inputField" placeholder="Password" required>
+                    <div class="checkSubmit">
+                        <input type="checkbox" class="checkBox" required><span>I agree to the terms and conditons</span>
+                        <button type="submit" class="submitBtn">Register</button>
+                    </div>
+                </form>
+                <form id="changePass" class="inputGroup" onsubmit="tryChangePassword(); return false;">
+                    <input id="changeName" type="text" class="inputField" placeholder="User ID" required>
+                    <input id="changePassOld" type="text" class="inputField" placeholder="Old password" required>
+                    <input id="changePassNew" type="text" class="inputField" placeholder="New password" required>
+                    <button type="submit" class="submitBtn">Change password</button>
+                </form>
+
+            </div>
+        </div>
+        <div class="imageRight">
+            <img id="witch" src="Assets/images/witchIndex.png" alt="Witch Character">
+        </div>
+    </div>
+    <div id="js-content" style="width: 100vw; height: 100vh;">
+        WHAT WHAT!!! IN THE BUTT
+    </div>
+    <script src="Assets/scripts/index.js"></script>
+    <script src="Assets/scripts/background.js"></script>
+</body>
+</html>

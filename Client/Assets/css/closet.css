@@ -1,0 +1,65 @@
+html body {
+  margin: 0;
+  padding: 0;
+}
+.closetContent {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-size: 3vh;
+  text-shadow: 1px 1px 4px black;
+  border-radius: 20px;
+  background-image: radial-gradient(#423364, #423364, #1b1529);
+}
+.characters {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.characterIndividual {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.character {
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.setName {
+  margin: 1vh;
+}
+
+.characterImg {
+  height: 70%;
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.equipBuy {
+  height: 20%;
+}
+
+.character button {
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  background-image: radial-gradient(#d5c7f4, #988fad, #322f39);
+  border: 1px white solid;
+  outline: none;
+  border-radius: 30px;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+}

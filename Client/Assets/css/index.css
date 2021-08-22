@@ -1,0 +1,228 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-image: radial-gradient(
+    ellipse at bottom,
+    #1b1822,
+    #08060c,
+    #000000
+  );
+  overflow: hidden;
+  scroll-behavior: smooth;
+  font-family: "Acme", sans-serif;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  color: inherit;
+}
+
+button {
+  font-family: "Acme", sans-serif;
+  font-size: 16px;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loginContainer {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.indexTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+  text-align: center;
+  padding-top: 2vh;
+  font-size: 35px;
+  font-family: "Berkshire Swash", cursive;
+}
+
+#btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  background-image: radial-gradient(#d5c7f4, #988fad, #322f39);
+  border: 1px white solid;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+.formBox {
+  width: 380px;
+  height: 410px;
+  position: relative;
+  background: #423364;
+  background-image: radial-gradient(#423364, #423364, #1b1529);
+  padding: 5px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.buttonBox {
+  width: 330px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #0a080f;
+  background-color: #151419;
+  border-radius: 10px;
+}
+
+.toggleBtn {
+  padding: 10px 20px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+}
+
+.inputGroup {
+  top: 180px;
+  position: absolute;
+  width: 280px;
+  transition: 0.5s;
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px 5px;
+  margin: 5px 0;
+  border: none;
+  outline: none;
+  background-image: linear-gradient(to right, #151419, #423364);
+  border-radius: 5px;
+}
+
+.submitBtn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+  background-image: radial-gradient(#d5c7f4, #988fad, #322f39);
+  border: 1px white solid;
+  outline: none;
+  border-radius: 30px;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+}
+
+.checkSubmit {
+  padding: 5px 0px 5px 0px;
+}
+
+#loginContainer span {
+  position: absolute;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+}
+
+#login {
+  left: 50px;
+}
+#register {
+  left: 450px;
+}
+
+#changePass {
+  left: 850px;
+}
+
+.inputField {
+  width: 100%;
+  color: white;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 2vh;
+  font-size: 30px;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+}
+
+.imageRight {
+  position: relative;
+  z-index: 2;
+  height: 80vh;
+}
+
+.witchIndex {
+  height: 80vh;
+  position: absolute;
+  animation: UpDown 2s ease-in-out infinite;
+}
+
+@keyframes UpDown {
+  0%,
+  100% {
+    bottom: 20px;
+  }
+  50% {
+    bottom: 70px;
+  }
+}
+
+.animateWushTop {
+  animation: WushTop 2s ease forwards;
+}
+@keyframes WushTop {
+  100% {
+    margin-top: -100vh;
+  }
+}
+
+.animateWushView {
+  animation: WushView 2s ease forwards;
+}
+@keyframes WushView {
+  100% {
+    margin-top: 0;
+  }
+}
+
+.animateWushBot {
+  animation: WushBot 2s ease forwards;
+}
+@keyframes WushBot {
+  100% {
+    margin-top: 100vh;
+  }
+}
