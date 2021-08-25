@@ -4,8 +4,8 @@
   flex: 1;
   justify-content: center;
   height: 100%;
-  color: white;
-  text-shadow: 1px 1px 4px black;
+  color: var(--textColor);
+  text-shadow: var(--textShadow);
   font-size: 3vh;
 }
 .cauldronGame {

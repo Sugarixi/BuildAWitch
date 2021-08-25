@@ -71,5 +71,5 @@
 
 .scoreContainer {
   float: right;
-  color: white;
+  color: var(--textColor);
 }

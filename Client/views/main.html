@@ -1,6 +1,7 @@
     <div class="mainContainer">
         <div class="main">
             <div class="topContainer">
+                <!-- Title of the website -->
                 <div class="titleLetter">
                     <span>B</span>
                 </div>
@@ -9,12 +10,14 @@
                         <div class="title">
                             uild a witch ✨
                         </div>
+                        <!-- Contact Me and Logout -->
                         <div class="logoutContainer">
                             <span><i id="envelope" class="far fa-envelope"></i></span>
                             <span class="logout" onclick="logout()">Logout</span>
                             <span class="logoutLogo" onclick="logout()"><i class="fas fa-sign-out-alt"></i></span>
                         </div>
                     </div>
+                    <!-- Menu -->
                     <div class="menu">
                         <span class="menuButton" onclick="gotoPage('mainContent')">Main</span>
                         <span class="menuButton" onclick="gotoPage('closetContent')">Closet</span>
@@ -31,13 +34,13 @@
             </div>
 
             <div class="contentContainer">
-
+                <!-- Main -->
                 <img class="mainCharacter mainContent" src="Assets/images/character1.png" alt="Character Image">
                 <div class="characterTextBubble mainContent">
                     <div class="bubblePoint"></div>
                     <span class="convoText"></span>
                 </div>
-
+                <!-- Closet -->
                 <div class="closetContent" style="display: none;">
                     <div class="characters">
                         <div class="characterIndividual">
@@ -64,7 +67,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- Bubble Game -->
                 <div class="bubbleContent" style="display: none;">
                     <button id="restartbubbles" class="restart" style="display: none;" onclick="startBubbles(true)">Restart</button>
                     <div class="container">
@@ -76,17 +79,17 @@
                         <div class="dynamicNumbersContainer">Score: <span class="bubbleScoreValue">0</span></div>                        
                     </div>
                 </div>
-
+                <!-- Potion Game -->
                 <div class="potionGame" style="display: none;">
                     <button id="restartPotion" class="restart" style="display: none;" onclick="startPotions()">Restart</button>
                     <div class="scoreContainer">Score: <span class="potionScoreValue">0</span></div>
                     <div class="witch"></div>
                     <div id="potion"></div>
                 </div>
-
             </div>
         </div>
     </div>
+    <!-- Pregame that pops up before Bubble game -->
     <div class="preGame" style="display: none;">
         <div class="blackGround" onclick="hidePreGame()"></div>
         <div class="convoContainer">
@@ -96,21 +99,22 @@
             </div>
         </div>
     </div>
+    <!-- Game over that pops up after games -->
     <div class="gameOver" style="display: none;">
         <div class="blackGround" onclick="hideGameOver()"></div>
-
+        <!-- Game over for Bubble game -->
         <div class="gameEndScreen bubbleScreen" style="display: none;">
             <img src="Assets/images/bubblescreen.png">
             <span class="endScreenText">Congratulations! <br> You popped X bubbles earning X points!</span>
         </div>
-
+        <!-- Game over for Potion game -->
         <div class="gameEndScreen potionScreen" style="display: none;">
             <img src="Assets/images/potionscreen.png">
             <span class="endScreenText">Congratulations! <br> You jumped over X potions earning X points!</span>
         </div>
     </div>
     
-    <!-- The Modal -->
+    <!-- Contact Me modal -->
     <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
@@ -126,7 +130,6 @@
                     <button type="reset">Clear</button>
                 </div>
             </form>
-
             <div class="socials">
                 <a href="https://www.linkedin.com/in/tuire-nissinen-284756204" target="_blank">
                     <i class="fab fa-linkedin"></i>

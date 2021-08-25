@@ -1,0 +1,7 @@
+:root {
+  --bgGradient: radial-gradient(#423364, #423364, #1b1529);
+  --buttonGradient: radial-gradient(#d5c7f4, #988fad, #322f39);
+  --inputGradient: linear-gradient(to right, #151419, #423364);
+  --textColor: white;
+  --textShadow: 1px 1px 4px black;
+}

@@ -81,7 +81,7 @@ function startPotions() {
     potion.addEventListener("animationend", function (e) {
         potion.classList.remove("animatePotion");
         let randomNum = (Math.floor(Math.random() * 4) + 1); //1-4
-        $("#potion").css("background-image", "url(../Potion Game/potion" + randomNum + ".png) !important");
+        $("#potion").css("background-image", "url(../Assets/Images/potion" + randomNum + ".png)");
         if (speedChange) {
             updateSpeed();
         }

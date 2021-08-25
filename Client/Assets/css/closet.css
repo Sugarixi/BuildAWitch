@@ -6,11 +6,11 @@ html body {
   position: relative;
   height: 100%;
   width: 100%;
-  color: white;
+  color: var(--textColor);
   font-size: 3vh;
-  text-shadow: 1px 1px 4px black;
+  text-shadow: var(--textShadow);
   border-radius: 20px;
-  background-image: radial-gradient(#423364, #423364, #1b1529);
+  background-image: var(--bgGradient);
 }
 .characters {
   height: 100%;
@@ -56,10 +56,10 @@ html body {
   padding: 10px 30px;
   cursor: pointer;
   display: block;
-  background-image: radial-gradient(#d5c7f4, #988fad, #322f39);
+  background-image: var(--buttonGradient);
   border: 1px white solid;
   outline: none;
   border-radius: 30px;
-  color: white;
-  text-shadow: 1px 1px 4px black;
+  color: var(--textColor);
+  text-shadow: var(--textShadow);
 }

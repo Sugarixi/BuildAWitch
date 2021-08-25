@@ -26,6 +26,9 @@
   .logoutLogo {
     display: block !important;
   }
+  .modal-content {
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 520px) {

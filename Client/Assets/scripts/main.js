@@ -137,6 +137,8 @@ function logout() {
     window.loggedUser = undefined;
     clearInterval(randomCharAnimation);
     clearInterval(randomCharConv);
+    $("#restartbubbles").css("display", "none");
+    $("#restartPotion").css("display", "none");
     $('#loginContainer')[0].classList.add("animateWushView");
     $('#appContainer')[0].classList.add("animateWushBot");
     $('#loginContainer').one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function (e) {

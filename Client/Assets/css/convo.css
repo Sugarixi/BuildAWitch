@@ -14,11 +14,11 @@
 
 .convoBubble {
   width: 100%;
-  background-image: radial-gradient(#423364, #423364, #1b1529);
+  background-image: var(--bgGradient);
   border: 2px solid black;
   font-size: 3vh;
-  color: white;
-  text-shadow: 1px 1px 4px black;
+  color: var(--textColor);
+  text-shadow: var(--textShadow);
   border-radius: 20px;
   padding: 2vh;
 }

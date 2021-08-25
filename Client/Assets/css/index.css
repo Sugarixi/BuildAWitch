@@ -44,8 +44,8 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
-  text-shadow: 1px 1px 4px black;
+  color: var(--textColor);
+  text-shadow: var(--textShadow);
   text-align: center;
   padding-top: 2vh;
   font-size: 35px;
@@ -59,7 +59,7 @@ button {
   position: absolute;
   width: 80px;
   height: 100%;
-  background-image: radial-gradient(#d5c7f4, #988fad, #322f39);
+  background-image: var(--buttonGradient);
   border: 1px white solid;
   transition: 0.5s;
   border-radius: 10px;
@@ -70,7 +70,7 @@ button {
   height: 410px;
   position: relative;
   background: #423364;
-  background-image: radial-gradient(#423364, #423364, #1b1529);
+  background-image: var(--bgGradient);
   padding: 5px;
   overflow: hidden;
   border-radius: 10px;
@@ -92,8 +92,8 @@ button {
   border: 0;
   outline: none;
   position: relative;
-  color: white;
-  text-shadow: 1px 1px 4px black;
+  color: var(--textColor);
+  text-shadow: var(--textShadow);
 }
 
 .inputGroup {
@@ -109,7 +109,7 @@ button {
   margin: 5px 0;
   border: none;
   outline: none;
-  background-image: linear-gradient(to right, #151419, #423364);
+  background-image: var(--inputGradient);
   border-radius: 5px;
 }
 
@@ -119,12 +119,12 @@ button {
   cursor: pointer;
   display: block;
   margin: 10px auto;
-  background-image: radial-gradient(#d5c7f4, #988fad, #322f39);
+  background-image: var(--buttonGradient);
   border: 1px white solid;
   outline: none;
   border-radius: 30px;
-  color: white;
-  text-shadow: 1px 1px 4px black;
+  color: var(--textColor);
+  text-shadow: var(--textShadow);
 }
 
 .checkSubmit {
@@ -133,8 +133,8 @@ button {
 
 #loginContainer span {
   position: absolute;
-  color: white;
-  text-shadow: 1px 1px 4px black;
+  color: var(--textColor);
+  text-shadow: var(--textShadow);
 }
 
 #login {
@@ -150,23 +150,23 @@ button {
 
 .inputField {
   width: 100%;
-  color: white;
+  color: var(--textColor);
 }
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
+  color: var(--textColor);
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: white;
+  color: var(--textColor);
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: white;
+  color: var(--textColor);
 }
 
 .socials {
@@ -174,8 +174,8 @@ button {
   justify-content: space-evenly;
   padding-top: 2vh;
   font-size: 30px;
-  color: white;
-  text-shadow: 1px 1px 4px black;
+  color: var(--textColor);
+  text-shadow: var(--textShadow);
 }
 
 .imageRight {

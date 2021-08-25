@@ -11,8 +11,8 @@ body {
   height: 100vh;
   animation: bounce-5 2s ease infinite;
   font-size: xx-large;
-  text-shadow: 1px 1px 4px black;
-  color: white;
+  color: var(--textColor);
+  text-shadow: var(--textShadow);
 }
 
 .loading {
