@@ -9,8 +9,8 @@
 				<button type="button" class="toggleBtn" onclick="change()">Change Password</button>
 			</div>
 			<form id="login" class="inputGroup" onsubmit="tryLogin(); return false;">
-				<input id="loginName" type="text" class="inputField" placeholder="User ID" value="chk1" required>
-				<input id="loginPassword" type="password" class="inputField" placeholder="Password" value="chk2" required>
+				<input id="loginName" type="text" class="inputField" placeholder="User ID" required>
+				<input id="loginPassword" type="password" class="inputField" placeholder="Password" required>
 				<button class="submitBtn" type="submit">Log in</button>
 				<div class="socials">
 					<a href="https://www.linkedin.com/in/tuire-nissinen-284756204" target="_blank">
@@ -29,7 +29,8 @@
 				<input id="registerEmail" type="email" class="inputField" placeholder="Email" required>
 				<input id="registerPassword" type="password" class="inputField" placeholder="Password" required>
 				<div class="checkSubmit">
-					<input type="checkbox" class="checkBox" required><span>I agree to the terms and conditons</span>
+					<input type="checkbox" class="checkBox" required><span>I agree to the <a
+							href="/views/termsAndConditions.html" target="_blank">terms and conditons</a></span>
 					<button type="submit" class="submitBtn">Register</button>
 				</div>
 			</form>

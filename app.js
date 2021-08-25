@@ -5,25 +5,25 @@ const app = express();
 const port = 3000;
 
 var con = mysql.createConnection({
-	host     : 'localhost',
-	user     : 'root',
-	password : '',
-	database : 'buildwitch',
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'buildwitch',
     multipleStatements: true
 });
-con.connect(function(err) {
+con.connect(function (err) {
     if (err) throw err;
     console.log("Connected!");
 });
 
 app.use(express.json());
-app.use('/',express.static(__dirname + "/Client"));
+app.use('/', express.static(__dirname + "/Client"));
 
-app.post('/Login', function(req, res) {
+app.post('/Login', function (req, res) {
     const userName = req.body.userName;
     const password = req.body.password;
     let responseObject = {};
-    var sql = "select * from users where users.userId='" + userName + "' and users.password='" + password + "'";
+    var sql = "select * from users where users.userId='" + userName + "' and users.password=PASSWORD('" + password + "')";
     con.query(sql, function (err, result) {
         if (err) throw err;
         if (result.length > 0) {
@@ -34,9 +34,9 @@ app.post('/Login', function(req, res) {
             con.query(sql, function (err2, result2) {
                 if (err2) throw err;
                 if (result2.length > 0) {
-                    responseObject.sets = result2.map(s => s.name);   
+                    responseObject.sets = result2.map(s => s.name);
                 }
-                res.json({ user : responseObject });
+                res.json({ user: responseObject });
             });
         }
         else
@@ -44,7 +44,7 @@ app.post('/Login', function(req, res) {
     });
 });
 
-app.post('/Register', function(req, res) {
+app.post('/Register', function (req, res) {
     const userName = req.body.userName;
     const email = req.body.email;
     const password = req.body.password;
@@ -55,7 +55,7 @@ app.post('/Register', function(req, res) {
             res.sendStatus(500);
         }
         else {
-            var sql = "INSERT INTO users (`userId`, `password`, `email`, `points`) VALUES ('" + userName + "', '" + password + "', '" + email + "', 0);";
+            var sql = "INSERT INTO users (`userId`, `password`, `email`, `points`) VALUES ('" + userName + "', PASSWORD('" + password + "'), '" + email + "', 0);";
             con.query(sql, function (err2, result2) {
                 if (err2) throw err;
                 res.sendStatus(200);
@@ -64,11 +64,11 @@ app.post('/Register', function(req, res) {
     });
 });
 
-app.post('/ChangePassword', function(req, res) {
+app.post('/ChangePassword', function (req, res) {
     const userName = req.body.userName;
     const passOld = req.body.passOld;
     const passNew = req.body.passNew;
-    var sql = "update users set password='" + passNew + "' where userId='" + userName + "' and password='" + passOld + "'";
+    var sql = "update users set password=PASSWORD('" + passNew + "') where userId='" + userName + "' and password=PASSWORD('" + passOld + "')";
     con.query(sql, function (err, result) {
         if (err) throw err;
         if (result.affectedRows > 0) {
@@ -80,7 +80,7 @@ app.post('/ChangePassword', function(req, res) {
     });
 });
 
-app.post('/UpdatePoints', function(req, res) {
+app.post('/UpdatePoints', function (req, res) {
     const userName = req.body.userId;
     const points = req.body.points;
     var sql = "update users set points='" + points + "' where userId='" + userName + "'";
@@ -95,7 +95,7 @@ app.post('/UpdatePoints', function(req, res) {
     });
 });
 
-app.post('/EquipSet', function(req, res) {
+app.post('/EquipSet', function (req, res) {
     const userName = req.body.userId;
     const setId = req.body.equippedSet ? req.body.equippedSet : "null";
     var sql = "update users set equippedSet=" + setId + " where userId='" + userName + "'";
@@ -110,7 +110,7 @@ app.post('/EquipSet', function(req, res) {
     });
 });
 
-app.post('/BuySet', function(req, res) {
+app.post('/BuySet', function (req, res) {
     const userName = req.body.userId;
     const setId = req.body.setId;
     var cost = 0;
@@ -129,7 +129,7 @@ app.post('/BuySet', function(req, res) {
                     con.query(sql, function (err3, result3) {
                         if (err3) { res.sendStatus(500); return; };
                         if (result3[1].affectedRows > 0) {
-                            res.json({points: newPoints});
+                            res.json({ points: newPoints });
                         }
                         else {
                             res.sendStatus(500);
@@ -148,5 +148,5 @@ app.post('/BuySet', function(req, res) {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+    console.log(`Example app listening at http://localhost:${port}`)
 });

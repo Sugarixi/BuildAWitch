@@ -1,146 +1,154 @@
-    <div class="mainContainer">
-        <div class="main">
-            <div class="topContainer">
-                <!-- Title of the website -->
-                <div class="titleLetter">
-                    <span>B</span>
+<div class="mainContainer">
+    <div class="main">
+        <div class="topContainer">
+            <!-- Title of the website -->
+            <div class="titleLetter">
+                <span>B</span>
+            </div>
+            <div class="menuContainer">
+                <div class="titleContainer">
+                    <div class="title">
+                        uild a witch ✨
+                    </div>
+                    <!-- Contact Me and Logout -->
+                    <div class="logoutContainer">
+                        <span><i id="envelope" class="far fa-envelope"></i></span>
+                        <span class="logout" onclick="logout()">Logout</span>
+                        <span class="logoutLogo" onclick="logout()"><i class="fas fa-sign-out-alt"></i></span>
+                    </div>
                 </div>
-                <div class="menuContainer">
-                    <div class="titleContainer">
-                        <div class="title">
-                            uild a witch ✨
-                        </div>
-                        <!-- Contact Me and Logout -->
-                        <div class="logoutContainer">
-                            <span><i id="envelope" class="far fa-envelope"></i></span>
-                            <span class="logout" onclick="logout()">Logout</span>
-                            <span class="logoutLogo" onclick="logout()"><i class="fas fa-sign-out-alt"></i></span>
+                <!-- Menu -->
+                <div class="menu">
+                    <span class="menuButton" onclick="gotoPage('mainContent')">Main</span>
+                    <span class="menuButton" onclick="gotoPage('closetContent')">Closet</span>
+                    <div class="dropdown menuButton">
+                        <span>Games <i class="fas fa-sort-down"></i></span>
+                        <div class="dropdownGames">
+                            <span onclick="gotoPage('bubbleContent','bubbles')">Bubble Pop</span>
+                            <span onclick="gotoPage('potionGame','potionGame')">Potion Run</span>
                         </div>
                     </div>
-                    <!-- Menu -->
-                    <div class="menu">
-                        <span class="menuButton" onclick="gotoPage('mainContent')">Main</span>
-                        <span class="menuButton" onclick="gotoPage('closetContent')">Closet</span>
-                        <div class="dropdown menuButton">
-                            <span>Games <i class="fas fa-sort-down"></i></span>
-                            <div class="dropdownGames">
-                                <span onclick="gotoPage('bubbleContent','bubbles')">Bubble Pop</span>
-                                <span onclick="gotoPage('potionGame','potionGame')">Potion Run</span>
-                            </div>
-                        </div>
-                        <span>Points: <span class="pointsContainer"></span></span>
-                    </div>
+                    <span>Points: <span class="pointsContainer"></span></span>
                 </div>
             </div>
+        </div>
 
-            <div class="contentContainer">
-                <!-- Main -->
-                <img class="mainCharacter mainContent" src="Assets/images/character1.png" alt="Character Image">
-                <div class="characterTextBubble mainContent">
-                    <div class="bubblePoint"></div>
-                    <span class="convoText"></span>
-                </div>
-                <!-- Closet -->
-                <div class="closetContent" style="display: none;">
-                    <div class="characters">
-                        <div class="characterIndividual">
-                            <div class="character" id="closetStudentContainer">
-                                <img src="Assets/images/character1.png" class="characterImg">
-                                <span class="setName">Student</span>
-                                <button onclick="activateSet(this)">Equip</button>
-                            </div>
-                            <div class="character" id="closetApprenticeContainer">
-                                <img src="Assets/images/character2.png" class="characterImg grayscale">
-                                <span class="setName">Apprentice</span>
-                                <button onclick="activateSet(this, 1, 'Apprentice')">Buy with 100 points</button>
-                            </div>
-                            <div class="character" id="closetWitchContainer">
-                                <img src="Assets/images/character3.png" class="characterImg grayscale">
-                                <span class="setName">Witch</span>
-                                <button onclick="activateSet(this, 2, 'Witch')">Buy with 300 points</button>
-                            </div>
-                            <div class="character" id="closetWizardContainer">
-                                <img src="Assets/images/character4.png" class="characterImg grayscale">
-                                <span class="setName">Wizard</span>
-                                <button onclick="activateSet(this, 3, 'Wizard')">Buy with 500 points</button>
-                            </div>
+        <div class="contentContainer">
+            <!-- Main -->
+            <img class="mainCharacter mainContent" src="Assets/images/character1.png" alt="Character Image">
+            <div class="characterTextBubble mainContent">
+                <div class="bubblePoint"></div>
+                <span class="convoText"></span>
+            </div>
+            <!-- Closet -->
+            <div class="closetContent" style="display: none;">
+                <div class="characters">
+                    <div class="characterIndividual">
+                        <div class="character" id="closetStudentContainer">
+                            <img src="Assets/images/character1.png" class="characterImg" alt="Character Image">
+                            <span class="setName">Student</span>
+                            <button onclick="activateSet(this)">Equip</button>
+                        </div>
+                        <div class="character" id="closetApprenticeContainer">
+                            <img src="Assets/images/character2.png" class="characterImg grayscale"
+                                alt="Character Image">
+                            <span class="setName">Apprentice</span>
+                            <button onclick="activateSet(this, 1, 'Apprentice')">Buy with 100 points</button>
+                        </div>
+                        <div class="character" id="closetWitchContainer">
+                            <img src="Assets/images/character3.png" class="characterImg grayscale"
+                                alt="Character Image">
+                            <span class="setName">Witch</span>
+                            <button onclick="activateSet(this, 2, 'Witch')">Buy with 300 points</button>
+                        </div>
+                        <div class="character" id="closetWizardContainer">
+                            <img src="Assets/images/character4.png" class="characterImg grayscale"
+                                alt="Character Image">
+                            <span class="setName">Wizard</span>
+                            <button onclick="activateSet(this, 3, 'Wizard')">Buy with 500 points</button>
                         </div>
                     </div>
                 </div>
-                <!-- Bubble Game -->
-                <div class="bubbleContent" style="display: none;">
-                    <button id="restartbubbles" class="restart" style="display: none;" onclick="startBubbles(true)">Restart</button>
-                    <div class="container">
-                        <div class="dynamicNumbersContainer">Timer: <span class="timerValue">20</span></div>
-                        <div class="cauldronGame">
-                            <img class="cauldron cauldronTop" src="Assets/images/cauldron-top.png" alt="Top of the cauldron">
-                            <img class="cauldron cauldronBot" src="Assets/images/cauldron-bottom.png" alt="Bottom of the cauldron">
-                        </div>
-                        <div class="dynamicNumbersContainer">Score: <span class="bubbleScoreValue">0</span></div>                        
+            </div>
+            <!-- Bubble Game -->
+            <div class="bubbleContent" style="display: none;">
+                <button id="restartbubbles" class="restart" style="display: none;"
+                    onclick="startBubbles(true)">Restart</button>
+                <div class="container">
+                    <div class="dynamicNumbersContainer">Timer: <span class="timerValue">20</span></div>
+                    <div class="cauldronGame">
+                        <img class="cauldron cauldronTop" src="Assets/images/cauldron-top.png"
+                            alt="Top of the cauldron">
+                        <img class="cauldron cauldronBot" src="Assets/images/cauldron-bottom.png"
+                            alt="Bottom of the cauldron">
                     </div>
+                    <div class="dynamicNumbersContainer">Score: <span class="bubbleScoreValue">0</span></div>
                 </div>
-                <!-- Potion Game -->
-                <div class="potionGame" style="display: none;">
-                    <button id="restartPotion" class="restart" style="display: none;" onclick="startPotions()">Restart</button>
-                    <div class="scoreContainer">Score: <span class="potionScoreValue">0</span></div>
-                    <div class="witch"></div>
-                    <div id="potion"></div>
-                </div>
+            </div>
+            <!-- Potion Game -->
+            <div class="potionGame" style="display: none;">
+                <button id="restartPotion" class="restart" style="display: none;"
+                    onclick="startPotions()">Restart</button>
+                <div class="scoreContainer">Score: <span class="potionScoreValue">0</span></div>
+                <div class="witch"></div>
+                <div id="potion"></div>
             </div>
         </div>
     </div>
-    <!-- Pregame that pops up before Bubble game -->
-    <div class="preGame" style="display: none;">
-        <div class="blackGround" onclick="hidePreGame()"></div>
-        <div class="convoContainer">
-            <img class="witchImg" src="Assets/images/witchConvo.png">
-            <div class="convoBubble">
-                <span class="instructionsText"></span>
+</div>
+<!-- Pregame that pops up before Bubble game -->
+<div class="preGame" style="display: none;">
+    <div class="blackGround" onclick="hidePreGame()"></div>
+    <div class="convoContainer">
+        <img class="witchImg" src="Assets/images/witchConvo.png" alt="Conversation Image">
+        <div class="convoBubble">
+            <span class="instructionsText"></span>
+        </div>
+    </div>
+</div>
+<!-- Game over that pops up after games -->
+<div class="gameOver" style="display: none;">
+    <div class="blackGround" onclick="hideGameOver()"></div>
+    <!-- Game over for Bubble game -->
+    <div class="gameEndScreen bubbleScreen" style="display: none;">
+        <img src="Assets/images/bubblescreen.png" alt="Game Over Image">
+        <span class="endScreenText">Congratulations! <br> You popped X bubbles earning X points!</span>
+    </div>
+    <!-- Game over for Potion game -->
+    <div class="gameEndScreen potionScreen" style="display: none;">
+        <img src="Assets/images/potionscreen.png" alt="Game Over Image">
+        <span class="endScreenText">Congratulations! <br> You jumped over X potions earning X points!</span>
+    </div>
+</div>
+
+<!-- Contact Me modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <span class="contactTitle">Contact Me</span>
+        <i class="fas fa-magic"></i>
+        <span>Please leave me some feedback down below. Also check out my socials to contact me!</span>
+        <form class="contactMeForm" target="_blank" action="https://formsubmit.co/f6f50882507d473a5b1bf310922e50ae"
+            method="POST">
+            <textarea name="contactMeMsg"></textarea>
+            <div class="spacer"></div>
+            <div class="buttons">
+                <button type="submit">Send</button>
+                <button type="reset">Clear</button>
             </div>
+        </form>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/tuire-nissinen-284756204" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/tuire.nissinen.9/" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/sugarixi/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
     </div>
-    <!-- Game over that pops up after games -->
-    <div class="gameOver" style="display: none;">
-        <div class="blackGround" onclick="hideGameOver()"></div>
-        <!-- Game over for Bubble game -->
-        <div class="gameEndScreen bubbleScreen" style="display: none;">
-            <img src="Assets/images/bubblescreen.png">
-            <span class="endScreenText">Congratulations! <br> You popped X bubbles earning X points!</span>
-        </div>
-        <!-- Game over for Potion game -->
-        <div class="gameEndScreen potionScreen" style="display: none;">
-            <img src="Assets/images/potionscreen.png">
-            <span class="endScreenText">Congratulations! <br> You jumped over X potions earning X points!</span>
-        </div>
-    </div>
-    
-    <!-- Contact Me modal -->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <span class="contactTitle">Contact Me</span>
-            <i class="fas fa-magic"></i>
-            <span>Please leave me some feedback down below. Also check out my socials to contact me!</span>
-            <form class="contactMeForm" target="_blank" action="https://formsubmit.co/f6f50882507d473a5b1bf310922e50ae" method="POST">
-                <textarea name="contactMeMsg"></textarea>
-                <div class="spacer">
-                <div class="buttons">
-                    <button type="submit">Send</button>
-                    <button type="reset">Clear</button>
-                </div>
-            </form>
-            <div class="socials">
-                <a href="https://www.linkedin.com/in/tuire-nissinen-284756204" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.facebook.com/tuire.nissinen.9/" target="_blank">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/sugarixi/" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-    </div>
+</div>
 </div>
