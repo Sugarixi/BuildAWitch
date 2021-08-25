@@ -1,0 +1,65 @@
+html body {
+  margin: 0;
+  padding: 0;
+}
+.closetContent {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: var(--textColor);
+  font-size: 3vh;
+  text-shadow: var(--textShadow);
+  border-radius: 20px;
+  background-image: var(--bgGradient);
+}
+.characters {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.characterIndividual {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.character {
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.setName {
+  margin: 1vh;
+}
+
+.characterImg {
+  height: 70%;
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.equipBuy {
+  height: 20%;
+}
+
+.character button {
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  background-image: var(--buttonGradient);
+  border: 1px white solid;
+  outline: none;
+  border-radius: 30px;
+  color: var(--textColor);
+  text-shadow: var(--textShadow);
+}

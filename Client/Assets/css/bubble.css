@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+  height: 100%;
+  color: var(--textColor);
+  text-shadow: var(--textShadow);
+  font-size: 3vh;
+}
+.cauldronGame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-end;
+}
+
+.bubbleEntity {
+  position: absolute;
+  border: 3px solid darkgreen;
+  z-index: 2;
+  width: max(3vw, 3vh);
+  height: max(3vw, 3vh);
+  max-width: 35px;
+  max-height: 35px;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    closest-side at 30% 30%,
+    white,
+    lightgreen,
+    #3ad770
+  );
+  opacity: 75%;
+}
+
+.dynamicNumbersContainer {
+  width: 10%;
+  min-width: 50px;
+}
+
+.animate {
+  animation: circle 2s infinite, animateBubble 6s linear forwards;
+}
+
+@keyframes circle {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animateBubble {
+  0% {
+    margin-top: 55vh;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+.cauldron {
+  align-self: flex-end;
+  max-width: 300px;
+  width: 100%;
+}
+
+.cauldronTop {
+  z-index: 1;
+}
+.cauldronBot {
+  z-index: 3;
+}

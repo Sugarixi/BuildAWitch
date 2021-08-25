@@ -1,0 +1,24 @@
+.convoContainer {
+  width: 30vw;
+  height: 30vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.witchImg {
+  height: 50%;
+}
+
+.convoBubble {
+  width: 100%;
+  background-image: var(--bgGradient);
+  border: 2px solid black;
+  font-size: 3vh;
+  color: var(--textColor);
+  text-shadow: var(--textShadow);
+  border-radius: 20px;
+  padding: 2vh;
+}

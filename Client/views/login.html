@@ -1,0 +1,48 @@
+<div class="content">
+	<div class="loginContainer">
+		<div class="formBox">
+			<div class="indexTitle">✨Build A Witch✨</div>
+			<div class="buttonBox">
+				<div id="btn" style="left: 0px;"></div>
+				<button type="button" class="toggleBtn" onclick="login()">Log in</button>
+				<button type="button" class="toggleBtn" onclick="register()">Register</button>
+				<button type="button" class="toggleBtn" onclick="change()">Change Password</button>
+			</div>
+			<form id="login" class="inputGroup" onsubmit="tryLogin(); return false;">
+				<input id="loginName" type="text" class="inputField" placeholder="User ID" value="chk1" required>
+				<input id="loginPassword" type="password" class="inputField" placeholder="Password" value="chk2" required>
+				<button class="submitBtn" type="submit">Log in</button>
+				<div class="socials">
+					<a href="https://www.linkedin.com/in/tuire-nissinen-284756204" target="_blank">
+						<i class="fab fa-linkedin"></i>
+					</a>
+					<a href="https://www.facebook.com/tuire.nissinen.9/" target="_blank">
+						<i class="fab fa-facebook"></i>
+					</a>
+					<a href="https://www.instagram.com/sugarixi/" target="_blank">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</div>
+			</form>
+			<form id="register" class="inputGroup" onsubmit="tryRegister(); return false;">
+				<input id="registerName" type="text" class="inputField" placeholder="User ID" required>
+				<input id="registerEmail" type="email" class="inputField" placeholder="Email" required>
+				<input id="registerPassword" type="password" class="inputField" placeholder="Password" required>
+				<div class="checkSubmit">
+					<input type="checkbox" class="checkBox" required><span>I agree to the terms and conditons</span>
+					<button type="submit" class="submitBtn">Register</button>
+				</div>
+			</form>
+			<form id="changePass" class="inputGroup" onsubmit="tryChangePassword(); return false;">
+				<input id="changeName" type="text" class="inputField" placeholder="User ID" required>
+				<input id="changePassOld" type="text" class="inputField" placeholder="Old password" required>
+				<input id="changePassNew" type="text" class="inputField" placeholder="New password" required>
+				<button type="submit" class="submitBtn">Change password</button>
+			</form>
+
+		</div>
+	</div>
+	<div class="imageRight">
+		<img class="witchIndex" src="../Assets/images/witchIndex.png" alt="Witch Character">
+	</div>
+</div>

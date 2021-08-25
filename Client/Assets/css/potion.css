@@ -1,0 +1,75 @@
+.potionGame {
+  width: 400px;
+  height: 150px;
+  border: 1px solid black;
+  margin: auto;
+  background-image: url(../images/background.png);
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  animation: animateBackground 10s linear infinite;
+}
+
+@keyframes animateBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100%;
+  }
+}
+
+.witch {
+  width: 40px;
+  height: 47px;
+  background-image: url(../images/witch.gif);
+  background-size: 40px 47px;
+  position: relative;
+  top: 100px;
+}
+
+.jump {
+  animation: jump 0.5s ease-in-out;
+}
+
+@keyframes jump {
+  0% {
+    top: 100px;
+  }
+  50% {
+    top: 30px;
+  }
+  100% {
+    top: 100px;
+  }
+}
+
+#potion {
+  width: 20px;
+  height: 40px;
+  background-image: url(../images/potion1.png);
+  background-size: 20px 40px;
+  position: relative;
+  top: 60px;
+  left: 90%;
+  animation-duration: 2s;
+}
+
+.animatePotion {
+  animation: block linear;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes block {
+  0% {
+    left: 90%;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+.scoreContainer {
+  float: right;
+  color: var(--textColor);
+}
