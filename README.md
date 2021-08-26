@@ -27,6 +27,10 @@ node app.js
 Navigate to http://localhost:3000
 ```
 
+Can log in with example-user
+UserId: chk1
+Password: chk2
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)

@@ -62,7 +62,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `userId`, `email`, `password`, `points`, `equippedSet`) VALUES
-(1, 'chk1', 'chk1@gmail.com', 'chk2', 9016, NULL);
+(1, 'chk1', 'chk1@gmail.com', PASSWORD('chk2'), 9016, NULL);
 
 -- --------------------------------------------------------
 

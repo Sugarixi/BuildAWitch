@@ -1,3 +1,8 @@
+//code was taken from https://codepen.io/ashimiro/pen/Lkzqo and edited to my needs
+
+//container - the html element where text will be displayed
+//arrayOfText - the text that will be displayed
+//timeoutsRefs - array that will hold all timeouts of the letters so we can clear it if user change page
 function setConvTextWithRef(container, arrayOfText, timeoutsRefs) {
     $(container).text("");
     var dialogs = arrayOfText,  
@@ -17,6 +22,7 @@ function setConvTextWithRef(container, arrayOfText, timeoutsRefs) {
     createDiag( individual );
 }
 
+//same as above without timeouts ref
 function setConvText(container, arrayOfText) {
     $(container).text("");
     var dialogs = arrayOfText,  
