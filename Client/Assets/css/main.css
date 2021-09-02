@@ -182,6 +182,7 @@ body {
 
 .bubbleContent {
   height: 100%;
+  user-select: none;
 }
 
 .restart {
