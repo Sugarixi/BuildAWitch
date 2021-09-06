@@ -104,4 +104,16 @@ describe('erikoistapaukset', () => {
     }).toThrow("argumentit puuttuvat");
   });
 
+  test('ei numeroita', () => {
+    expect(() => {
+      onJaettavissa(5,"a");
+    }).toThrow("argumenttien tulee olla numeroita");
+  });
+
+  test('ei symboleita', () => {
+    expect(() => {
+      onJaettavissa("@","b");
+    }).toThrow("argumenttien tulee olla numeroita");
+  });
+
 });
