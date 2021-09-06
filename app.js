@@ -2,10 +2,10 @@
 const express = require('express');
 const path = require('path');
 var mysql = require('mysql');
+const port = 3000;
 
 //initiate express server with port 3000
 const app = express();
-const port = 3000;
 
 //setting up sql connection
 var con = mysql.createConnection({
@@ -197,6 +197,7 @@ app.post('/BuySet', function (req, res) {
         }
     });
 });
+
 
 //start the backend server, going live
 app.listen(port, () => {
